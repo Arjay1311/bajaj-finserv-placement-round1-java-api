@@ -1,7 +1,7 @@
 {
   "name": "bajaj-api",
   "version": "1.0.0",
-  "main": "api/bfhl.js",
+  "main": "api/main.js",
   "dependencies": {
     "express": "^4.18.2"
   }
