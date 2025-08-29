@@ -2,9 +2,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route("/bf", methods=["POST"])
+@app.route("/bfhl", methods=["POST"])
 def foo():
-    data = request.json
+    data = request.json.get("data", [])  
 
     user_id = "arjay_jg_13112004"
     email = "arjayjg1311@gmail.com"
@@ -15,10 +15,10 @@ def foo():
     alphabets = [i for i in data if i.isalpha()]
     arr_of_special_characters = [i for i in data if not i.isalnum()]
     sum_of_numbers = str(sum(int(i) for i in data if i.isdigit()))
-    concat_string = ''.join(alphabets)[::-1]
+    concat_string = ''.join(alphabets)[::-1]  
 
     response = {
-        "is_success": "true",
+        "is_success": True,
         "user_id": user_id,
         "email": email,
         "college_roll_number": college_roll_number,
@@ -31,6 +31,7 @@ def foo():
     }
 
     return jsonify(response)
+
 
 def handler(request, response):
     return app(request, response)

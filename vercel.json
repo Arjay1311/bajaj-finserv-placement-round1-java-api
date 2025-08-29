@@ -11,5 +11,10 @@
       "src": "/bfhl",
       "dest": "/api/main.py"
     }
-  ]
+  ],
+  "functions": {
+    "api/bfhl.py": {
+      "runtime": "python3.9"
+    }
+  }
 }
