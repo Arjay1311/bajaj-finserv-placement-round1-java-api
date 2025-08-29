@@ -1,20 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/main.py",
-      "use": "@vercel/python"
+  "functions": {
+    "api/main.py": {
+      "runtime": "vercel-python@0.5.0"
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/bfhl",
-      "dest": "/api/main.py"
+      "src": "/(.*)",
+      "dest": "api/main.py"
     }
-  ],
-  "functions": {
-    "api/bfhl.py": {
-      "runtime": "python3.9"
-    }
-  }
+  ]
 }
