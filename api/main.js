@@ -1,5 +1,3 @@
-// api/bfhl.js
-
 const express = require("express");
 const app = express();
 
@@ -58,5 +56,4 @@ app.post("/api/bfhl", (req, res) => {
   res.json(response);
 });
 
-// Export handler for Vercel
 module.exports = app;
